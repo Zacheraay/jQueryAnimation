@@ -62,9 +62,9 @@ function shift() {
     }
 
     if(right) {
-        $(".layer"+layer).animate({ left: "+=50px" }); //adds 50px to all of the block's css left value
+        $(".layer"+layer).animate({ left: "+=50px" }, 0); //adds 50px to all of the block's css left value
     } else if(!right) {
-        $(".layer"+layer).animate({ left: "-=50px" }); //subtracts 50px from all of the block's css left value
+        $(".layer"+layer).animate({ left: "-=50px" }, 0); //subtracts 50px from all of the block's css left value
     }
 }
 
