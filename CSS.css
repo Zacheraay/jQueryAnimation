@@ -13,8 +13,9 @@ body {
 
 .unit {
     position: absolute;
-    background: red;
-    width: 50px;
-    height: 50px;
+    border: 1px solid lightblue;
+    background: blue;
+    width: 49px;
+    height: 49px;
     bottom: 0%;
 }
