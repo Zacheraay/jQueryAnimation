@@ -11,6 +11,16 @@ body {
     margin-left: -200px;
 }
 
+#win {
+    font-size: 30px;
+    padding: 30px;
+}
+
+#lose {
+    font-size: 30px;
+    padding: 30px;
+}
+
 .unit {
     position: absolute;
     border: 1px solid lightblue;
