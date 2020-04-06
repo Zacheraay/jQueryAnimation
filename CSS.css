@@ -14,11 +14,19 @@ body {
 #win {
     font-size: 30px;
     padding: 30px;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
 }
 
 #lose {
     font-size: 30px;
     padding: 30px;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
 }
 
 .unit {

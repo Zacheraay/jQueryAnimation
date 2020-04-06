@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $("#win").hide();
-    $("#lose").hide();
     createLayer()
 });
 
@@ -18,19 +16,21 @@ $(document).keydown(function (event) {
 })
 
 //reset
-$(document).keydown(function (event) {
-    if (event.key == "r") {
+$(document).mousedown(function (event) {
         $(".unit").remove();
         $('#window').css("background-color", "white");
-        $("#win").hide();
-        $("#lose").hide();
+        $("#win").animate({
+            opacity: 0
+        }, 10);
+        $("#lose").animate({
+            opacity: 0
+        }, 10);
         number = 4;
         layer = 0;
         right;
         move;
         speed = 400;
         createLayer();
-    }
 })
 
 function createLayer() {
@@ -61,13 +61,17 @@ $(document).keydown(function (event) { //2nd keydown function, the first is befo
             speed = 60; //caps the speed
         }
         //win and lose conditions
-        if (layer == 15) {
+        if (layer == 14) {
             $('#window').css("background-color", "#39FF14");
-            $("#win").show();
+            $("#win").animate({
+                opacity: 1
+            });
         } else if (number == 0) {
             $('#window').css("background-color", "red");
-            $("#lose").show();
-        } else if (number > 0 && layer < 16) {
+            $("#lose").animate({
+                opacity: 1
+            });
+        } else if (number > 0 && layer < 15) {
             createLayer(); //creates a new layer if there is less than 16 layers and at least 1 block still left
         }
         released = false;
