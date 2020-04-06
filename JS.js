@@ -30,6 +30,7 @@ $(document).mousedown(function (event) {
         right;
         move;
         speed = 400;
+        clearInterval(move);
         createLayer();
 })
 
